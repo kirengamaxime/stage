@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Experience - Maxime</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #1f4037, #99f2c8);
+      color: #fff;
+      scroll-behavior: smooth;
+    }
+
+    nav {
+      background: rgba(0, 0, 0, 0.85);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    }
+
+    nav div {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #00e5ff;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      padding: 0;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+      position: relative;
+    }
+
+    nav ul li a::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 3px;
+      background: #00e5ff;
+      transition: width 0.3s;
+    }
+
+    nav ul li a:hover::after {
+      width: 100%;
+    }
+
+    .container {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .experience-item, .testimonial {
+      background: rgba(0, 0, 0, 0.4);
+      padding: 1.5rem;
+      margin: 1rem 0;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0,229,255,0.2);
+      transform: translateY(0);
+      transition: all 0.5s ease-in-out;
+    }
+
+    .experience-item:hover, .testimonial:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0,229,255,0.4);
+    }
+
+    h1, h2 {
+      color: #00e5ff;
+    }
+
+    .slideshow {
+      width: 100%;
+      max-width: 700px;
+      margin: 2rem auto;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+    }
+
+    .slides {
+      display: flex;
+      width: 300%;
+      animation: slideShow 15s infinite;
+    }
+
+    .slides img {
+      width: 100%;
+      object-fit: cover;
+    }
+
+    @keyframes slideShow {
+      0% { transform: translateX(0); }
+      33% { transform: translateX(-100%); }
+      66% { transform: translateX(-200%); }
+      100% { transform: translateX(0); }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div>Maxime</div>
+    <ul>
+      <li><a href="homepage.html">Home</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="sign up.html">Sign Up</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h1>Professional Experience</h1>
+
+    <div class="slideshow">
+      <div class="slides">
+        <img src="img/slide1.jpg" alt="Slide 1" />
+        <img src="img/slide2.jpg" alt="Slide 2" />
+        <img src="img/slide3.jpg" alt="Slide 3" />
+      </div>
+    </div>
+
+    <div class="experience-item">
+      <h2>Frontend Developer – TechNova</h2>
+      <p>Built dynamic user interfaces using HTML, CSS, JavaScript with attention to detail and modern transitions.</p>
+    </div>
+
+    <div class="experience-item">
+      <h2>Freelance Web Designer</h2>
+      <p>Created responsive websites with interactive effects and animations that improved user engagement by 35%.</p>
+    </div>
+
+    <div class="experience-item">
+      <h2>Open Source Contributor</h2>
+      <p>Maintained UI consistency and accessibility features in several GitHub projects with a focus on clean, performant code.</p>
+    </div>
+
+    <h2>Testimonials</h2>
+
+    <div class="testimonial">
+      "Maxime brought fresh design ideas and was always responsive to feedback. He truly elevated our product's user interface." – Jane Doe, TechNova
+    </div>
+    <div class="testimonial">
+      "His work ethic and creativity are top-notch. Maxime delivered every project on time with outstanding quality." – John Smith, Freelance Client
+    </div>
+    <div class="testimonial">
+      "A valuable contributor to our open source community. Maxime’s attention to UI detail made a real difference." – Sarah Lee, GitHub Maintainer
+    </div>
+  </div>
+</body>
+</html>

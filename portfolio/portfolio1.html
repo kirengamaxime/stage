@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maxime's Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      transition: background 1s ease;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+
+    nav {
+      background: rgba(0, 0, 0, 0.8);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    nav div {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #00e5ff;
+      font-family: 'Trebuchet MS', sans-serif;
+      letter-spacing: 1px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.8rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 600;
+      position: relative;
+      transition: all 0.4s ease;
+    }
+
+    nav ul li a::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      background: #00e5ff;
+      left: 0;
+      bottom: -4px;
+      transition: 0.4s;
+    }
+
+    nav ul li a:hover {
+      color: #00e5ff;
+      cursor: pointer;
+    }
+
+    nav ul li a:hover::after {
+      width: 100%;
+    }
+
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #00e5ff;
+      box-shadow: 0 0 15px #00e5ff;
+      transition: transform 0.5s;
+    }
+
+    .profile-img:hover {
+      transform: scale(1.1) rotate(2deg);
+    }
+
+    .slideshow {
+      margin-top: 2rem;
+      width: 100%;
+      max-width: 700px;
+      height: 300px;
+      border-radius: 15px;
+      overflow: hidden;
+      position: relative;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 6px 25px rgba(0,0,0,0.5);
+    }
+
+    .slides {
+      width: 300%;
+      height: 100%;
+      display: flex;
+      animation: slideShow 15s infinite ease-in-out;
+    }
+
+    .slides img {
+      width: 100%;
+      object-fit: cover;
+    }
+
+    @keyframes slideShow {
+      0% { transform: translateX(0%); }
+      33% { transform: translateX(-100%); }
+      66% { transform: translateX(-200%); }
+      100% { transform: translateX(0%); }
+    }
+
+    .section, .profile-section {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 2rem;
+      margin: 2rem auto;
+      border-radius: 15px;
+      max-width: 900px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 25px rgba(0, 229, 255, 0.3);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .section:hover, .profile-section:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 35px rgba(0, 229, 255, 0.5);
+    }
+
+    h1, h2 {
+      color: #00e5ff;
+    }
+
+    h1:hover, h2:hover {
+      color: #1de9b6;
+    }
+
+    button, input[type="submit"] {
+      background-color: #00e5ff;
+      color: #fff;
+      border: none;
+      padding: 0.7rem 1.5rem;
+      border-radius: 25px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    button:hover, input[type="submit"]:hover {
+      background-color: #1de9b6;
+      transform: scale(1.05);
+    }
+
+    a {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div><strong>Maxime</strong></div>
+    <ul>
+      <li><a href="homepage.html">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="project.html">Projects</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="sign up.html">Sign Up</a></li>
+    </ul>
+  </nav>
+
+  <!-- Content remains unchanged below -->
+</body>
+</html>
